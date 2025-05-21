@@ -43,7 +43,7 @@ export default function About() {
           <div className="md:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="/src/assets/medical_team.jpg" 
                 alt="Healthcare professionals team" 
                 className="w-full h-auto"
               />

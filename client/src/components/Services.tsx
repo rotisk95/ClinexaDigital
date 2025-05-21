@@ -85,8 +85,8 @@ export default function Services() {
     <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container">
         <SectionHeading 
-          title="Specialized Digital Solutions for Healthcare Providers"
-          subtitle="We understand the unique challenges medical practices face online. Our tailored solutions help you connect with patients while maintaining compliance and security."
+          title="Specialized Digital Solutions for Modern Healthcare"
+          subtitle="We understand the unique challenges medical practices face online. Our custom websites and digital tools are designed specifically for family doctors and small medical practices, ensuring HIPAA compliance and building patient trust."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

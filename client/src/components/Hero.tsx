@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="md:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&h=550&q=80" 
+                src="/src/assets/doctor_patient1.jpg" 
                 alt="Doctor consulting with patient" 
                 className="w-full h-auto"
               />

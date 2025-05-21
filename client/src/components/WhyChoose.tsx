@@ -54,29 +54,29 @@ export default function WhyChoose() {
             <div className="grid grid-cols-2 gap-4">
               <div className="overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                  alt="Medical professionals in a modern clinic setting" 
+                  src="/src/assets/medical_team.jpg" 
+                  alt="Diverse team of healthcare professionals" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md mt-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                  alt="Doctor using digital technology" 
+                  src="/src/assets/doctor_patient1.jpg" 
+                  alt="Doctor consulting with patient" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md">
                 <img 
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                  alt="Modern medical office waiting area" 
+                  src="/src/assets/doctor_patient2.jpg" 
+                  alt="Doctor with clipboard helping patient" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md mt-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=300&q=80" 
-                  alt="Doctor reviewing information with patient" 
+                  src="/src/assets/medical_team.jpg" 
+                  alt="Healthcare team collaboration" 
                   className="w-full h-full object-cover"
                 />
               </div>
