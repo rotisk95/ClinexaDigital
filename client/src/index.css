@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Base colors */
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  
+  /* Clinexa colors */
+  --primary: 215 75% 20%; /* Clinexa navy blue (#0F3254) */
+  --primary-light: 210 65% 30%; /* Lighter navy (#1A4B7C) */
+  --primary-dark: 215 75% 15%; /* Darker navy (#092341) */
+  
+  --secondary: 210 74% 59%; /* Clinexa blue (#4A90E2) */
+  --secondary-light: 210 74% 69%; /* Lighter blue (#6BA4E8) */
+  --secondary-dark: 210 54% 51%; /* Darker blue (#3A7AC9) */
+  
+  --accent: 178 62% 47%; /* Clinexa teal (#2CC4BF) */
+  --accent-light: 178 62% 59%; /* Lighter teal (#4FDED9) */
+  --accent-dark: 178 62% 40%; /* Darker teal (#25A8A4) */
+  
+  /* ShadCN UI variables */
+  --primary-foreground: 0 0% 98%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 215 75% 20%;
+  --radius: 0.5rem;
+  
+  /* Chart colors */
+  --chart-1: 215 75% 20%;
+  --chart-2: 210 74% 59%;
+  --chart-3: 178 62% 47%;
+  --chart-4: 217 91% 60%;
+  --chart-5: 338 85% 43%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 215 75% 20%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 antialiased bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+/* Custom classes */
+.container {
+  @apply px-4 md:px-6 lg:px-8 mx-auto;
+}
+
+.bg-overlay {
+  @apply bg-primary/75;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
