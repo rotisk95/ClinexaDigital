@@ -26,14 +26,14 @@ export default function About() {
                 <p className="font-medium">100% focus on healthcare industry</p>
               </div>
               <div className="flex items-center">
-                <div className="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
-                  <Check className="h-4 w-4 text-primary" />
+                <div className="bg-accent bg-opacity-10 p-2 rounded-full mr-4">
+                  <img src="/src/assets/medical-icon3.svg" alt="Medical cross icon" className="h-4 w-4" />
                 </div>
                 <p className="font-medium">HIPAA compliance expertise</p>
               </div>
               <div className="flex items-center">
-                <div className="bg-primary bg-opacity-10 p-2 rounded-full mr-4">
-                  <Check className="h-4 w-4 text-primary" />
+                <div className="bg-secondary bg-opacity-10 p-2 rounded-full mr-4">
+                  <img src="/src/assets/healthcare-tech.svg" alt="Healthcare technology icon" className="h-4 w-4" />
                 </div>
                 <p className="font-medium">Practice management system integration</p>
               </div>

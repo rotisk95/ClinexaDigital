@@ -59,11 +59,11 @@ export default function WhyChoose() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="overflow-hidden rounded-lg shadow-md mt-6">
+              <div className="overflow-hidden rounded-lg shadow-md mt-6 bg-primary bg-opacity-10 flex items-center justify-center p-6">
                 <img 
-                  src="/src/assets/doctor_patient1.jpg" 
-                  alt="Doctor consulting with patient" 
-                  className="w-full h-full object-cover"
+                  src="/src/assets/medical-icon1.svg" 
+                  alt="Medical cross symbol" 
+                  className="w-20 h-20"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md">
@@ -73,11 +73,11 @@ export default function WhyChoose() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="overflow-hidden rounded-lg shadow-md mt-6">
+              <div className="overflow-hidden rounded-lg shadow-md mt-6 bg-accent bg-opacity-10 flex items-center justify-center p-6">
                 <img 
-                  src="/src/assets/medical_team.jpg" 
-                  alt="Healthcare team collaboration" 
-                  className="w-full h-full object-cover"
+                  src="/src/assets/medical-icon2.svg" 
+                  alt="Medical aid kit icon" 
+                  className="w-20 h-20"
                 />
               </div>
             </div>
