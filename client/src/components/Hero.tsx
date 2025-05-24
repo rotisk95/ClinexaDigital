@@ -27,9 +27,12 @@ export default function Hero() {
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
               <img 
                 src="/src/assets/doctor_patient1.jpg" 
-                alt="Doctor consulting with patient" 
+                alt="Doctor consulting with patient in Fort Worth medical office" 
                 className="w-full h-auto"
+                loading="eager"
+                aria-describedby="hero-image-description"
               />
+              <span id="hero-image-description" className="sr-only">A healthcare professional consulting with a patient, representing Clinexa's focus on improving doctor-patient communication through digital tools</span>
               <div className="absolute inset-0 bg-primary opacity-10"></div>
             </div>
           </div>

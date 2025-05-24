@@ -41,6 +41,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
+  const fortWorthLocations = ["Fort Worth", "Benbrook", "Arlington", "Burleson", "Crowley", "Mansfield"];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
@@ -294,10 +295,11 @@ export default function Contact() {
                     <div>
                       <h4 className="font-medium text-gray-800 mb-1">Visit Us</h4>
                       <p className="text-gray-600">
-                        123 Healthcare Avenue<br />
-                        Suite 200<br />
-                        Boston, MA 02110
+                        5290 Westridge Ave<br />
+                        Suite 120<br />
+                        Fort Worth, TX 76109
                       </p>
+                      <p className="text-sm text-gray-600 mt-1">Serving {fortWorthLocations.join(", ")}</p>
                     </div>
                   </div>
                 </div>

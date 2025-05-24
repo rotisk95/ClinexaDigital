@@ -11,6 +11,8 @@ export default function SectionHeading({
   alignment = "center",
   className = ""
 }: SectionHeadingProps) {
+  // Add structured data attributes for better SEO
+  const headingId = title.toLowerCase().replace(/\s+/g, '-');
   const alignmentClasses = alignment === "center" ? "text-center" : "text-left";
   
   return (
