@@ -63,16 +63,16 @@ export default function Contact() {
       setIsSubmitting(true);
       
       // Send the form data to our backend API
-      const response = await apiRequest('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await apiRequest(
+        'POST', 
+        '/api/contact', 
+        data
+      );
+      
+      const responseData = await response.json();
       
       // Check if response was successful
-      if (response.success) {
+      if (responseData.success) {
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you as soon as possible.",
@@ -85,7 +85,7 @@ export default function Contact() {
         // Handle server error messages
         toast({
           title: "Something went wrong.",
-          description: response.message || "Your message could not be sent. Please try again.",
+          description: responseData.message || "Your message could not be sent. Please try again.",
           variant: "destructive"
         });
       }
