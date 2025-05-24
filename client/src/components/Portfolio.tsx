@@ -38,13 +38,13 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
             <div key={index} className="group bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-primary">
                 <img 
                   src={item.image} 
                   alt={`${item.title} website design`} 
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-primary bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-primary opacity-5 group-hover:opacity-0 transition-all duration-300"></div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
