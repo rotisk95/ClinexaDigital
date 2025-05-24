@@ -6,23 +6,27 @@ interface PortfolioItem {
   image: string;
   title: string;
   description: string;
+  caseStudyLink: string;
 }
 
 const portfolioItems: PortfolioItem[] = [
   {
     image: "/images/family-care.png",
     title: "Family Care Associates",
-    description: "Complete website redesign with integrated appointment booking and patient portal."
+    description: "Complete website redesign with integrated appointment booking and patient portal.",
+    caseStudyLink: "/case-study/family-care"
   },
   {
     image: "/images/sunshine-pediatrics.png",
     title: "Sunshine Pediatrics",
-    description: "Child-friendly website design with parent resources and digital form integration."
+    description: "Child-friendly website design with parent resources and digital form integration.",
+    caseStudyLink: "/case-study/sunshine-pediatrics"
   },
   {
     image: "/images/lakeside-dental.png",
     title: "Lakeside Dental",
-    description: "Complete digital presence with virtual consultations and online patient education."
+    description: "Complete digital presence with virtual consultations and online patient education.",
+    caseStudyLink: "/case-study/lakeside-dental"
   }
 ];
 
@@ -50,7 +54,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 <a 
-                  href="#" 
+                  href={item.caseStudyLink} 
                   className="inline-flex items-center text-primary font-medium hover:text-primary-dark"
                 >
                   View case study <ArrowRight className="ml-2 h-4 w-4" />
