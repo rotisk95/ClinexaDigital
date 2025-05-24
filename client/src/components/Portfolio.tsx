@@ -10,17 +10,17 @@ interface PortfolioItem {
 
 const portfolioItems: PortfolioItem[] = [
   {
-    image: "https://images.unsplash.com/photo-1573496546038-82f9c39f6365?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80",
+    image: "/src/assets/doctor_patient1.jpg",
     title: "Family Care Associates",
     description: "Complete website redesign with integrated appointment booking and patient portal."
   },
   {
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80",
+    image: "/src/assets/medical_team.jpg",
     title: "Sunshine Pediatrics",
     description: "Child-friendly website design with parent resources and digital form integration."
   },
   {
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&h=400&q=80",
+    image: "/src/assets/doctor_patient2.jpg",
     title: "Lakeside Dental",
     description: "Complete digital presence with virtual consultations and online patient education."
   }

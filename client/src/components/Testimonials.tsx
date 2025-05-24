@@ -11,21 +11,21 @@ interface Testimonial {
 
 const testimonialsList: Testimonial[] = [
   {
-    content: "Clinexa transformed our outdated website into a professional platform that our patients love. The online scheduling feature has reduced our front desk calls by 30%.",
+    content: "Clinexa transformed our outdated website into a professional platform that our patients love. The online scheduling feature has reduced our front desk calls by 30% and improved our patient satisfaction ratings.",
     author: "Dr. Rebecca Johnson",
     role: "Family Physician, Metro Family Care",
     initials: "RJ",
     bgColor: "bg-primary"
   },
   {
-    content: "The patient intake forms have streamlined our workflow immensely. Our staff spends less time on paperwork and more time on patient care. The HIPAA compliance features give us peace of mind.",
+    content: "The patient intake forms have streamlined our workflow immensely. Our staff spends less time on paperwork and more time on patient care. The HIPAA compliance features give us peace of mind knowing patient data is secure.",
     author: "Dr. Thomas Chen",
     role: "Pediatrician, Sunshine Children's Clinic",
     initials: "TC",
     bgColor: "bg-secondary"
   },
   {
-    content: "Working with Clinexa was effortless. They understood our practice needs and delivered a website that has significantly improved our new patient acquisition. Their ongoing support is exceptional.",
+    content: "Working with Clinexa was effortless. They understood our small practice needs and delivered a website that has significantly improved our new patient acquisition. Their knowledge of healthcare regulations and ongoing support is exceptional.",
     author: "Dr. Maria Martinez",
     role: "Dentist, Lakeside Dental Care",
     initials: "MM",
@@ -40,7 +40,7 @@ export default function Testimonials() {
       <div className="container relative">
         <SectionHeading 
           title="What Healthcare Providers Say"
-          subtitle="Read what medical professionals like you have to say about working with Clinexa."
+          subtitle="Read what doctors and medical professionals say about how Clinexa has transformed their online presence and practice efficiency."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

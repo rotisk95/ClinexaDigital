@@ -45,7 +45,7 @@ export default function Header() {
     <header className={`fixed w-full bg-white z-50 ${isScrolled ? "shadow-md" : ""}`}>
       <div className="container">
         <div className="flex items-center justify-between py-4">
-          <ClexiaLogo />
+          <ClexiaLogo size="md" />
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

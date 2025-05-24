@@ -18,14 +18,14 @@ export default function CTA() {
             Ready to Transform Your Medical Practice Online?
           </h2>
           <p className="text-xl text-white text-opacity-90 mb-8">
-            Schedule a free consultation to discuss how we can create a custom digital solution for your healthcare practice.
+            Schedule a free consultation to discuss how we can create a custom digital solution for your clinic that's secure, compliant, and designed for patient trust.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild variant="secondary" size="lg" className="bg-white hover:bg-gray-100 text-primary">
-              <a href="#contact">Schedule a Consultation</a>
+              <a href="#contact">Get a Quote for Your Clinic</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
-              <a href="#portfolio">View Our Work</a>
+              <a href="#portfolio">See a Live Demo</a>
             </Button>
           </div>
         </div>

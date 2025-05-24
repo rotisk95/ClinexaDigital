@@ -6,10 +6,10 @@ export default function TrustedBy() {
           Trusted by medical practices across the country
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-          <div className="text-gray-400 font-heading font-semibold">Family Care</div>
-          <div className="text-gray-400 font-heading font-semibold">Metro Health</div>
-          <div className="text-gray-400 font-heading font-semibold">Lakeside Clinic</div>
-          <div className="text-gray-400 font-heading font-semibold">Valley Medical</div>
+          <div className="text-primary font-heading font-semibold">Family Care Center</div>
+          <div className="text-primary font-heading font-semibold">Metro Health Clinic</div>
+          <div className="text-primary font-heading font-semibold">Lakeside Family Practice</div>
+          <div className="text-primary font-heading font-semibold">Valley Medical Group</div>
         </div>
       </div>
     </section>

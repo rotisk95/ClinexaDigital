@@ -10,13 +10,13 @@ export default function About() {
               About Clinexa Medical
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Clinexa Medical specializes in creating digital solutions exclusively for healthcare providers. Our team combines healthcare industry knowledge with technical expertise to deliver solutions that meet the unique needs of medical practices.
+              Clinexa Medical specializes in creating digital solutions exclusively for healthcare providers. Our team combines healthcare industry knowledge with technical expertise to deliver secure, compliant solutions that meet the unique needs of family doctors and small medical practices.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Founded by healthcare and technology professionals, we understand the challenges medical practices face in the digital landscape. Our mission is to help healthcare providers leverage technology to improve patient care and practice efficiency.
+              Founded by healthcare and technology professionals, we understand the challenges medical practices face in the digital landscape. Our mission is to help healthcare providers leverage technology to improve patient trust and practice efficiency.
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              We pride ourselves on creating HIPAA-compliant, patient-friendly websites and digital tools that enhance the patient experience while streamlining your practice operations.
+              We pride ourselves on creating HIPAA-compliant, patient-friendly websites and digital tools that enhance the patient experience while streamlining your clinic operations. From appointment integration to digital forms, we build solutions designed for modern healthcare.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
