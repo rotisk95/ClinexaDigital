@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#F8F7FF"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="80" fill="#FFA500"/>
+  <circle cx="50" cy="40" r="25" fill="#FFFF00"/>
+  <text x="90" y="35" font-family="Arial" font-size="18" fill="#ffffff" font-weight="bold">Sunshine Pediatrics</text>
+  <text x="90" y="55" font-family="Arial" font-size="14" fill="#ffffff">Kids Corner</text>
+  
+  <rect x="400" y="25" width="80" height="30" rx="15" fill="#4A90E2"/>
+  <text x="418" y="45" font-family="Arial" font-size="14" fill="#ffffff">Parents</text>
+  
+  <rect x="500" y="25" width="80" height="30" rx="15" fill="#FF6B6B"/>
+  <text x="518" y="45" font-family="Arial" font-size="14" fill="#ffffff">Kids</text>
+  
+  <!-- Main Content -->
+  <rect x="30" y="100" width="540" height="280" rx="10" fill="#ffffff" stroke="#eaeaea"/>
+  
+  <!-- Characters -->
+  <circle cx="100" cy="150" r="40" fill="#FFD700"/>
+  <circle cx="90" cy="140" r="8" fill="#ffffff"/>
+  <circle cx="110" cy="140" r="8" fill="#ffffff"/>
+  <path d="M80,160 Q100,180 120,160" stroke="#000000" stroke-width="3" fill="transparent"/>
+  
+  <circle cx="220" cy="150" r="40" fill="#4A90E2"/>
+  <circle cx="210" cy="140" r="8" fill="#ffffff"/>
+  <circle cx="230" cy="140" r="8" fill="#ffffff"/>
+  <path d="M200,160 Q220,180 240,160" stroke="#000000" stroke-width="3" fill="transparent"/>
+  
+  <circle cx="340" cy="150" r="40" fill="#FF6B6B"/>
+  <circle cx="330" cy="140" r="8" fill="#ffffff"/>
+  <circle cx="350" cy="140" r="8" fill="#ffffff"/>
+  <path d="M320,160 Q340,180 360,160" stroke="#000000" stroke-width="3" fill="transparent"/>
+  
+  <circle cx="460" cy="150" r="40" fill="#2CC4BF"/>
+  <circle cx="450" cy="140" r="8" fill="#ffffff"/>
+  <circle cx="470" cy="140" r="8" fill="#ffffff"/>
+  <path d="M440,160 Q460,180 480,160" stroke="#000000" stroke-width="3" fill="transparent"/>
+  
+  <!-- Labels -->
+  <text x="80" y="210" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Dr. Sunny</text>
+  <text x="220" y="210" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Nurse Blue</text>
+  <text x="340" y="210" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Happy Heart</text>
+  <text x="460" y="210" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Tooth Fairy</text>
+  
+  <!-- Game buttons -->
+  <rect x="50" y="240" width="120" height="100" rx="10" fill="#FFD700" fill-opacity="0.3"/>
+  <text x="110" y="290" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Body Parts</text>
+  <text x="110" y="310" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">Learning Game</text>
+  
+  <rect x="190" y="240" width="120" height="100" rx="10" fill="#4A90E2" fill-opacity="0.3"/>
+  <text x="250" y="290" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Healthy Foods</text>
+  <text x="250" y="310" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">Matching Game</text>
+  
+  <rect x="330" y="240" width="120" height="100" rx="10" fill="#FF6B6B" fill-opacity="0.3"/>
+  <text x="390" y="290" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Doctor Visit</text>
+  <text x="390" y="310" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">Story Time</text>
+  
+  <rect x="470" y="240" width="120" height="100" rx="10" fill="#2CC4BF" fill-opacity="0.3"/>
+  <text x="530" y="290" font-family="Arial" font-size="16" fill="#333333" text-anchor="middle">Brush Time</text>
+  <text x="530" y="310" font-family="Arial" font-size="14" fill="#666666" text-anchor="middle">Dental Game</text>
+</svg>

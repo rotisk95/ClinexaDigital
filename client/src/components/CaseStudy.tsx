@@ -107,7 +107,7 @@ export default function CaseStudy({
                   <img 
                     src={img} 
                     alt={`${client} website screenshot ${index + 1}`}
-                    className="w-full object-cover h-64"
+                    className="w-full object-contain h-64 bg-gray-50"
                   />
                 </div>
               ))}

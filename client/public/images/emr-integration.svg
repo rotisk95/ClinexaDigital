@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#2CC4BF"/>
+  
+  <!-- Medical cross symbol -->
+  <rect x="120" y="80" width="60" height="140" rx="5" fill="#0F3254"/>
+  <rect x="70" y="130" width="160" height="40" rx="5" fill="#0F3254"/>
+  
+  <!-- EMR integration elements -->
+  <rect x="50" y="190" width="200" height="30" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+  <rect x="50" y="230" width="200" height="30" rx="5" fill="#ffffff" fill-opacity="0.2"/>
+  
+  <!-- Connection lines -->
+  <path d="M90,80 L90,50 L210,50 L210,80" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="150" cy="50" r="10" fill="#0F3254"/>
+  
+  <!-- Device icons -->
+  <rect x="60" y="85" width="40" height="30" rx="3" fill="#ffffff"/>
+  <rect x="65" y="90" width="30" height="20" rx="2" fill="#0F3254"/>
+  
+  <rect x="200" y="85" width="40" height="30" rx="3" fill="#ffffff"/>
+  <rect x="205" y="90" width="30" height="20" rx="2" fill="#0F3254"/>
+</svg>

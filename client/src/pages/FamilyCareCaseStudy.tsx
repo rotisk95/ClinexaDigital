@@ -25,8 +25,8 @@ export default function FamilyCareCaseStudy() {
       "Responsive design for all devices"
     ],
     additionalImages: [
-      "/src/assets/family-care-portal.svg",
-      "/src/assets/family-care-mobile.svg"
+      "/images/family-care-portal.svg",
+      "/images/family-care-mobile.svg"
     ],
     testimonial: {
       quote: "Clinexa transformed our digital presence and streamlined our patient communication. The integration with our EMR system works flawlessly, and both our staff and patients love how easy the system is to use. Most importantly, we have complete confidence in the security and compliance of the solution.",
