@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#0F3254"/>
+  
+  <!-- Shield base -->
+  <path d="M150,40 L220,70 L220,160 C220,180 190,220 150,260 C110,220 80,180 80,160 L80,70 L150,40 Z" fill="#4A90E2" fill-opacity="0.6"/>
+  
+  <!-- Lock body -->
+  <rect x="120" y="135" width="60" height="50" rx="5" fill="#ffffff"/>
+  
+  <!-- Lock shackle -->
+  <path d="M130,135 L130,110 C130,95 170,95 170,110 L170,135" stroke="#ffffff" stroke-width="10" stroke-linecap="round" fill="none"/>
+  
+  <!-- HIPAA text -->
+  <text x="150" y="165" font-family="Arial" font-size="18" fill="#0F3254" text-anchor="middle">HIPAA</text>
+  
+  <!-- Security circles -->
+  <circle cx="150" cy="210" r="40" fill="#ffffff" fill-opacity="0.2"/>
+  <circle cx="150" cy="210" r="30" fill="#ffffff" fill-opacity="0.3"/>
+  <circle cx="150" cy="210" r="20" fill="#ffffff" fill-opacity="0.4"/>
+  <circle cx="150" cy="210" r="10" fill="#ffffff"/>
+</svg>
