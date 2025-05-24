@@ -81,6 +81,8 @@ const servicesList: Service[] = [
 ];
 
 export default function Services() {
+  // For improved SEO with keyword targeting
+  const keywords = ["custom medical websites", "doctor website design", "HIPAA web design", "EMR website integration"];
   return (
     <section id="services" className="py-16 md:py-24 bg-white">
       <div className="container">
@@ -90,23 +92,42 @@ export default function Services() {
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesList.map((service, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-primary mb-4 flex items-center">
-                {service.icon}
+          {servicesList.map((service, index) => {
+            // Add data attributes for SEO and keyword targeting
+            const serviceKeyword = keywords[index % keywords.length];
+            const serviceId = `service-${service.title.toLowerCase().replace(/\s+/g, '-')}`;
+            
+            return (
+              <div 
+                key={index} 
+                id={serviceId}
+                className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow"
+                data-service-type={service.title.toLowerCase()}
+                data-region="fort-worth-tx"
+                data-keyword={serviceKeyword}
+              >
+                <div className="text-primary mb-4 flex items-center" aria-hidden="true">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <ul 
+                  className="text-gray-700 space-y-2" 
+                  aria-label={`Features of ${service.title}`}
+                >
+                  {service.features.map((feature, i) => (
+                    <li key={i} className="flex items-start">
+                      <Check 
+                        className="h-4 w-4 text-accent mt-1 mr-2 flex-shrink-0" 
+                        aria-hidden="true"
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <ul className="text-gray-700 space-y-2">
-                {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-start">
-                    <Check className="h-4 w-4 text-accent mt-1 mr-2 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
         
         <div className="text-center mt-12">

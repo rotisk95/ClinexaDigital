@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 
 export default function CTA() {
+  // Add targeted region for SEO
+  const serviceRegion = "Fort Worth and Benbrook, TX";
+  
   return (
     <section className="py-16 bg-primary relative">
       <div className="absolute inset-0 opacity-10">

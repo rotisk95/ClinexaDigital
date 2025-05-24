@@ -17,11 +17,18 @@ export default function SectionHeading({
   
   return (
     <div className={`mb-16 ${alignmentClasses} ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+      <h2 
+        id={headingId}
+        className="text-3xl md:text-4xl font-bold text-primary mb-4"
+        data-section-title
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p 
+          className="text-lg text-gray-600 max-w-3xl mx-auto"
+          aria-describedby={headingId}
+        >
           {subtitle}
         </p>
       )}
