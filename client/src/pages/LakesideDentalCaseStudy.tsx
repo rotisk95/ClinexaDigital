@@ -26,8 +26,8 @@ export default function LakesideDentalCaseStudy() {
       "Advanced analytics to track patient education engagement"
     ],
     additionalImages: [
-      "/images/lakeside-dental-consultation.jpg",
-      "/images/lakeside-dental-education.jpg"
+      "/src/assets/lakeside-dental-consultation.svg",
+      "/src/assets/lakeside-dental-education.svg"
     ],
     testimonial: {
       quote: "Our partnership with Clinexa has transformed how we interact with patients. The virtual consultation feature has been a game-changer, allowing us to provide preliminary guidance to patients and better prepare for their visits. The education resources have also significantly improved treatment acceptance rates as patients better understand their options before coming in.",
