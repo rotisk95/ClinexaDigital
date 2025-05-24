@@ -33,8 +33,8 @@ const contactFormSchema = z.object({
   phone: z.string().optional(),
   interest: z.string({ required_error: "Please select a service" }),
   message: z.string().optional(),
-  privacyAgreed: z.literal(true, {
-    errorMap: () => ({ message: "You must agree to the privacy policy" })
+  privacyAgreed: z.boolean().refine(val => val === true, {
+    message: "You must agree to the privacy policy"
   })
 });
 
@@ -53,6 +53,7 @@ export default function Contact() {
       email: "",
       phone: "",
       message: "",
+      interest: "",
       privacyAgreed: false
     }
   });
@@ -60,18 +61,36 @@ export default function Contact() {
   async function onSubmit(data: ContactFormValues) {
     try {
       setIsSubmitting(true);
-      // In a real app, we would send this data to the backend
-      // For now, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
       
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you as soon as possible.",
-        variant: "default"
+      // Send the form data to our backend API
+      const response = await apiRequest('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
       });
       
-      form.reset();
+      // Check if response was successful
+      if (response.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "We'll get back to you as soon as possible.",
+          variant: "default"
+        });
+        
+        // Reset the form after successful submission
+        form.reset();
+      } else {
+        // Handle server error messages
+        toast({
+          title: "Something went wrong.",
+          description: response.message || "Your message could not be sent. Please try again.",
+          variant: "destructive"
+        });
+      }
     } catch (error) {
+      console.error("Error submitting contact form:", error);
       toast({
         title: "Something went wrong.",
         description: "Your message could not be sent. Please try again.",
