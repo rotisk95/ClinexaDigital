@@ -17,7 +17,7 @@ export default function Hero() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary-dark text-white">
                 <a href="#contact">Schedule a Consultation</a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white">
+              <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-white hover:text-[#0F3254]">
                 <a href="#portfolio">See Our Work</a>
               </Button>
             </div>

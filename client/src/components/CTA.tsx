@@ -27,7 +27,7 @@ export default function CTA() {
             <Button asChild variant="secondary" size="lg" className="bg-white hover:bg-gray-100 text-primary">
               <a href="#contact">Get a Quote for Your Clinic</a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild variant="outline" size="lg" className="border-white bg-white text-primary hover:bg-gray-100">
               <a href="#portfolio">See a Live Demo</a>
             </Button>
           </div>
