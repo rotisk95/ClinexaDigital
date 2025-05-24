@@ -10,17 +10,17 @@ interface PortfolioItem {
 
 const portfolioItems: PortfolioItem[] = [
   {
-    image: "/src/assets/medical-mockup1.svg",
+    image: "/images/family-care.png",
     title: "Family Care Associates",
     description: "Complete website redesign with integrated appointment booking and patient portal."
   },
   {
-    image: "/src/assets/medical-mockup2.svg",
+    image: "/images/sunshine-pediatrics.png",
     title: "Sunshine Pediatrics",
     description: "Child-friendly website design with parent resources and digital form integration."
   },
   {
-    image: "/src/assets/medical-mockup3.svg",
+    image: "/images/lakeside-dental.png",
     title: "Lakeside Dental",
     description: "Complete digital presence with virtual consultations and online patient education."
   }
@@ -38,11 +38,11 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
             <div key={index} className="group bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative overflow-hidden bg-primary">
+              <div className="relative overflow-hidden">
                 <img 
                   src={item.image} 
-                  alt={`${item.title} website design`} 
-                  className="w-full h-64 object-contain transition-transform duration-500 group-hover:scale-105"
+                  alt={`${item.title} medical facility`} 
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-primary opacity-5 group-hover:opacity-0 transition-all duration-300"></div>
               </div>
