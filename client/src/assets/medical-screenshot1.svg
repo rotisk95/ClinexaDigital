@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="80" fill="#0F3254"/>
+  <text x="40" y="45" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">Lakeside Dental</text>
+  <text x="40" y="65" font-family="Arial" font-size="14" fill="#ffffff">Patient Portal</text>
+  
+  <rect x="400" y="25" width="80" height="30" rx="3" fill="transparent" stroke="#ffffff"/>
+  <text x="420" y="45" font-family="Arial" font-size="14" fill="#ffffff">Services</text>
+  
+  <rect x="500" y="25" width="80" height="30" rx="3" fill="#2CC4BF"/>
+  <text x="512" y="45" font-family="Arial" font-size="14" fill="#ffffff">My Account</text>
+  
+  <!-- Main Content -->
+  <rect x="0" y="80" width="600" height="320" fill="#f5f5f5"/>
+  
+  <!-- Appointment Booking -->
+  <rect x="40" y="100" width="320" height="280" rx="5" fill="#ffffff" stroke="#eaeaea"/>
+  <text x="60" y="130" font-family="Arial" font-size="18" fill="#0F3254" font-weight="bold">Book Your Appointment</text>
+  
+  <text x="60" y="160" font-family="Arial" font-size="14" fill="#333333">Service Type:</text>
+  <rect x="60" y="170" width="280" height="35" rx="3" fill="#ffffff" stroke="#cccccc"/>
+  <text x="75" y="193" font-family="Arial" font-size="14" fill="#333333">Dental Cleaning</text>
+  
+  <text x="60" y="220" font-family="Arial" font-size="14" fill="#333333">Preferred Date:</text>
+  <rect x="60" y="230" width="280" height="35" rx="3" fill="#ffffff" stroke="#cccccc"/>
+  <text x="75" y="253" font-family="Arial" font-size="14" fill="#333333">June 15, 2025</text>
+  
+  <text x="60" y="280" font-family="Arial" font-size="14" fill="#333333">Preferred Time:</text>
+  <rect x="60" y="290" width="280" height="35" rx="3" fill="#ffffff" stroke="#cccccc"/>
+  <text x="75" y="313" font-family="Arial" font-size="14" fill="#333333">Morning (9am - 12pm)</text>
+  
+  <rect x="60" y="340" width="130" height="35" rx="3" fill="#0F3254"/>
+  <text x="90" y="363" font-family="Arial" font-size="14" fill="#ffffff">Book Now</text>
+  
+  <!-- Calendar Widget -->
+  <rect x="380" y="100" width="180" height="280" rx="5" fill="#ffffff" stroke="#eaeaea"/>
+  <text x="400" y="130" font-family="Arial" font-size="16" fill="#0F3254" font-weight="bold">Available Dates</text>
+  
+  <!-- Calendar Header -->
+  <rect x="390" y="145" width="160" height="30" fill="#0F3254" fill-opacity="0.1"/>
+  <text x="470" y="165" font-family="Arial" font-size="14" fill="#0F3254" text-anchor="middle">June 2025</text>
+  
+  <!-- Calendar Grid -->
+  <line x1="390" y1="180" x2="550" y2="180" stroke="#eaeaea" stroke-width="1"/>
+  
+  <text x="405" y="195" font-family="Arial" font-size="12" fill="#666">S</text>
+  <text x="428" y="195" font-family="Arial" font-size="12" fill="#666">M</text>
+  <text x="450" y="195" font-family="Arial" font-size="12" fill="#666">T</text>
+  <text x="472" y="195" font-family="Arial" font-size="12" fill="#666">W</text>
+  <text x="495" y="195" font-family="Arial" font-size="12" fill="#666">T</text>
+  <text x="517" y="195" font-family="Arial" font-size="12" fill="#666">F</text>
+  <text x="538" y="195" font-family="Arial" font-size="12" fill="#666">S</text>
+  
+  <line x1="390" y1="205" x2="550" y2="205" stroke="#eaeaea" stroke-width="1"/>
+  
+  <!-- Calendar Dates - Row 1 -->
+  <text x="405" y="225" font-family="Arial" font-size="12" fill="#ccc">30</text>
+  <text x="428" y="225" font-family="Arial" font-size="12" fill="#ccc">31</text>
+  <text x="450" y="225" font-family="Arial" font-size="12" fill="#333">1</text>
+  <text x="472" y="225" font-family="Arial" font-size="12" fill="#333">2</text>
+  <text x="495" y="225" font-family="Arial" font-size="12" fill="#333">3</text>
+  <text x="517" y="225" font-family="Arial" font-size="12" fill="#333">4</text>
+  <text x="538" y="225" font-family="Arial" font-size="12" fill="#333">5</text>
+  
+  <!-- Calendar Dates - Row 2 -->
+  <text x="405" y="250" font-family="Arial" font-size="12" fill="#333">6</text>
+  <text x="428" y="250" font-family="Arial" font-size="12" fill="#333">7</text>
+  <text x="450" y="250" font-family="Arial" font-size="12" fill="#333">8</text>
+  <text x="472" y="250" font-family="Arial" font-size="12" fill="#333">9</text>
+  <text x="495" y="250" font-family="Arial" font-size="12" fill="#333">10</text>
+  <text x="517" y="250" font-family="Arial" font-size="12" fill="#333">11</text>
+  <text x="538" y="250" font-family="Arial" font-size="12" fill="#333">12</text>
+  
+  <!-- Calendar Dates - Row 3 with highlighted date -->
+  <text x="405" y="275" font-family="Arial" font-size="12" fill="#333">13</text>
+  <text x="428" y="275" font-family="Arial" font-size="12" fill="#333">14</text>
+  <circle cx="450" cy="270" r="12" fill="#2CC4BF"/>
+  <text x="450" y="275" font-family="Arial" font-size="12" fill="#ffffff" font-weight="bold">15</text>
+  <text x="472" y="275" font-family="Arial" font-size="12" fill="#333">16</text>
+  <text x="495" y="275" font-family="Arial" font-size="12" fill="#333">17</text>
+  <text x="517" y="275" font-family="Arial" font-size="12" fill="#333">18</text>
+  <text x="538" y="275" font-family="Arial" font-size="12" fill="#333">19</text>
+  
+  <!-- Appointment Legend -->
+  <rect x="400" y="320" width="12" height="12" fill="#2CC4BF"/>
+  <text x="420" y="330" font-family="Arial" font-size="12" fill="#333333">Available</text>
+  
+  <rect x="400" y="345" width="12" height="12" fill="#cccccc"/>
+  <text x="420" y="355" font-family="Arial" font-size="12" fill="#333333">Booked</text>
+</svg>
