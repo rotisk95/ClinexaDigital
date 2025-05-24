@@ -25,8 +25,8 @@ export default function SunshinePediatricsCaseStudy() {
       "Mobile-responsive design optimized for parents on-the-go"
     ],
     additionalImages: [
-      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=2080",
-      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932"
+      "/images/sunshine-pediatrics-kids.svg",
+      "/images/sunshine-pediatrics-forms.svg"
     ],
     testimonial: {
       quote: "The website Clinexa created for us perfectly captures our practice philosophy of making pediatric care a positive experience. Parents love being able to complete forms before visits, and children actually enjoy exploring the kids' section while waiting. It's made a tremendous difference in our practice efficiency and patient satisfaction.",
