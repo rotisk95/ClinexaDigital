@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
+import { sendContactFormEmail } from "./services/emailService";
 
 const contactFormSchema = z.object({
   name: z.string().min(2),
@@ -20,14 +21,23 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate the request body
       const validatedData = contactFormSchema.parse(req.body);
       
-      // In a real application, we would save this to a database
-      // and potentially send an email notification
+      // Send email notification
+      const emailSent = await sendContactFormEmail(validatedData);
       
-      // For now, just return a success response
-      res.status(200).json({ 
-        success: true, 
-        message: "Thank you for your message. We'll get back to you soon." 
-      });
+      if (emailSent) {
+        // Email sent successfully
+        res.status(200).json({ 
+          success: true, 
+          message: "Thank you for your message. We'll get back to you soon." 
+        });
+      } else {
+        // Email failed to send but data was valid
+        console.warn("Contact form submission valid but email notification failed");
+        res.status(200).json({ 
+          success: true, 
+          message: "Your message was received, but there may be a delay in our response." 
+        });
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ 
