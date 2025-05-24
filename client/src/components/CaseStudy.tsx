@@ -88,7 +88,7 @@ export default function CaseStudy({
             {testimonial && (
               <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-4 text-primary">Client Feedback</h2>
-                <div className="bg-primary bg-opacity-5 p-6 rounded-lg shadow-sm border-l-4 border-primary">
+                <div className="bg-[#E0FFFF] p-6 rounded-lg shadow-sm border-l-4 border-primary">
                   <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
                   <p className="text-primary font-semibold">{testimonial.author}</p>
                   <p className="text-gray-600 text-sm">{testimonial.role}</p>

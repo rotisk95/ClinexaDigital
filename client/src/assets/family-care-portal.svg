@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#ffffff"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="600" height="80" fill="#0F3254"/>
+  <rect x="30" y="25" width="120" height="30" rx="3" fill="#ffffff"/>
+  <text x="50" y="45" font-family="Arial" font-size="14" fill="#0F3254" font-weight="bold">Family Care</text>
+  
+  <rect x="390" y="30" width="60" height="20" rx="3" fill="transparent" stroke="#ffffff"/>
+  <text x="400" y="44" font-family="Arial" font-size="12" fill="#ffffff">Login</text>
+  
+  <rect x="470" y="30" width="100" height="20" rx="3" fill="#2CC4BF"/>
+  <text x="485" y="44" font-family="Arial" font-size="12" fill="#ffffff">Patient Portal</text>
+  
+  <!-- Main Content -->
+  <rect x="0" y="80" width="600" height="320" fill="#f5f5f5"/>
+  
+  <!-- Sidebar -->
+  <rect x="30" y="100" width="180" height="280" rx="5" fill="#ffffff" stroke="#eaeaea"/>
+  <rect x="50" y="120" width="140" height="40" rx="3" fill="#0F3254"/>
+  <text x="75" y="145" font-family="Arial" font-size="14" fill="#ffffff">Dashboard</text>
+  
+  <rect x="50" y="170" width="140" height="30" rx="3" fill="transparent"/>
+  <text x="75" y="190" font-family="Arial" font-size="14" fill="#0F3254">Appointments</text>
+  
+  <rect x="50" y="210" width="140" height="30" rx="3" fill="transparent"/>
+  <text x="75" y="230" font-family="Arial" font-size="14" fill="#0F3254">Messages</text>
+  
+  <rect x="50" y="250" width="140" height="30" rx="3" fill="transparent"/>
+  <text x="75" y="270" font-family="Arial" font-size="14" fill="#0F3254">Lab Results</text>
+  
+  <rect x="50" y="290" width="140" height="30" rx="3" fill="transparent"/>
+  <text x="75" y="310" font-family="Arial" font-size="14" fill="#0F3254">Prescriptions</text>
+  
+  <rect x="50" y="330" width="140" height="30" rx="3" fill="transparent"/>
+  <text x="75" y="350" font-family="Arial" font-size="14" fill="#0F3254">Profile</text>
+  
+  <!-- Main area -->
+  <rect x="240" y="100" width="330" height="100" rx="5" fill="#ffffff" stroke="#eaeaea"/>
+  <text x="260" y="130" font-family="Arial" font-size="16" fill="#0F3254" font-weight="bold">Welcome back, Sarah</text>
+  <text x="260" y="155" font-family="Arial" font-size="14" fill="#666">Your next appointment is on May 28, 2025 at 10:30 AM</text>
+  <rect x="260" y="170" width="120" height="20" rx="3" fill="#2CC4BF"/>
+  <text x="280" y="184" font-family="Arial" font-size="12" fill="#ffffff">View Details</text>
+  
+  <!-- Upcoming appointments -->
+  <rect x="240" y="220" width="330" height="160" rx="5" fill="#ffffff" stroke="#eaeaea"/>
+  <text x="260" y="250" font-family="Arial" font-size="16" fill="#0F3254" font-weight="bold">Upcoming Appointments</text>
+  
+  <line x1="260" y1="270" x2="550" y2="270" stroke="#eaeaea" stroke-width="2"/>
+  
+  <text x="260" y="290" font-family="Arial" font-size="14" fill="#666">May 28, 2025</text>
+  <text x="360" y="290" font-family="Arial" font-size="14" fill="#666">10:30 AM</text>
+  <text x="450" y="290" font-family="Arial" font-size="14" fill="#666">Dr. Johnson</text>
+  
+  <line x1="260" y1="300" x2="550" y2="300" stroke="#eaeaea" stroke-width="1"/>
+  
+  <text x="260" y="320" font-family="Arial" font-size="14" fill="#666">June 15, 2025</text>
+  <text x="360" y="320" font-family="Arial" font-size="14" fill="#666">2:00 PM</text>
+  <text x="450" y="320" font-family="Arial" font-size="14" fill="#666">Dr. Williams</text>
+  
+  <line x1="260" y1="330" x2="550" y2="330" stroke="#eaeaea" stroke-width="1"/>
+  
+  <text x="260" y="350" font-family="Arial" font-size="14" fill="#666">July 10, 2025</text>
+  <text x="360" y="350" font-family="Arial" font-size="14" fill="#666">9:15 AM</text>
+  <text x="450" y="350" font-family="Arial" font-size="14" fill="#666">Dr. Miller</text>
+</svg>
