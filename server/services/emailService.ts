@@ -63,8 +63,8 @@ export async function sendContactFormEmail(formData: any): Promise<boolean> {
     
     // Define email message parameters
     const msg = {
-      to: 'contact@clinexa.com', // Recipient email address
-      from: 'no-reply@clinexa.com', // Sender email address (must be verified in SendGrid)
+      to: 'noel.tiscareno@outlook.com', // Recipient email address
+      from: 'noel.tiscareno@outlook.com', // Sender email address (must be verified in SendGrid)
       subject: `New Contact Form Submission from ${formData.name}`,
       text,
       html,
