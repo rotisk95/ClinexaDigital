@@ -75,8 +75,11 @@ export async function sendContactFormEmail(formData: any): Promise<boolean> {
     await mailService.send(msg);
     console.log('Contact form email sent successfully');
     return true;
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error sending contact form email:', error);
+    if (error.response && error.response.body) {
+      console.error('SendGrid error details:', JSON.stringify(error.response.body, null, 2));
+    }
     return false;
   }
 }
