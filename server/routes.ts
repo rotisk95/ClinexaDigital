@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { z } from "zod";
-import { sendContactFormEmailNodemailer } from "./services/nodemailerService";
+import { sendContactFormEmail } from "./services/emailService";
 
 const contactFormSchema = z.object({
   name: z.string().min(2),
@@ -22,7 +22,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = contactFormSchema.parse(req.body);
       
       // Send email notification
-      const emailSent = await sendContactFormEmailNodemailer(validatedData);
+      const emailSent = await sendContactFormEmail(validatedData);
       
       if (emailSent) {
         // Email sent successfully
