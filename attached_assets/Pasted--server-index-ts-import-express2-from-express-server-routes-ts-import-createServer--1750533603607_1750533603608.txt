@@ -1,0 +1,276 @@
+// server/index.ts
+import express2 from "express";
+
+// server/routes.ts
+import { createServer } from "http";
+import { z } from "zod";
+
+// server/services/emailService.ts
+import { MailService } from "@sendgrid/mail";
+var mailService = new MailService();
+mailService.setApiKey(process.env.SENDGRID_API_KEY || "");
+var createContactEmailContent = (formData) => {
+  const { name, email, practice, phone, interest, message } = formData;
+  const serviceOptions = {
+    "website": "Custom Medical Website",
+    "appointment": "Appointment System",
+    "forms": "Digital Patient Forms",
+    "seo": "Local SEO for Medical Practices",
+    "communication": "Patient Communication Tools",
+    "hosting": "HIPAA-Compliant Hosting",
+    "other": "Other/Multiple Services"
+  };
+  const htmlContent = `
+    <h2>New Contact Form Submission</h2>
+    <p><strong>From:</strong> ${name}</p>
+    ${practice ? `<p><strong>Practice:</strong> ${practice}</p>` : ""}
+    <p><strong>Email:</strong> ${email}</p>
+    ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
+    <p><strong>Interested in:</strong> ${serviceOptions[interest] || interest}</p>
+    ${message ? `<p><strong>Message:</strong> ${message}</p>` : ""}
+    <p><em>This message was sent from the Clinexa website contact form.</em></p>
+  `;
+  const textContent = `
+    New Contact Form Submission
+    ---------------------------
+    From: ${name}
+    ${practice ? `Practice: ${practice}
+` : ""}
+    Email: ${email}
+    ${phone ? `Phone: ${phone}
+` : ""}
+    Interested in: ${serviceOptions[interest] || interest}
+    ${message ? `Message: ${message}
+` : ""}
+    
+    This message was sent from the Clinexa website contact form.
+  `;
+  return {
+    html: htmlContent,
+    text: textContent
+  };
+};
+async function sendContactFormEmail(formData) {
+  try {
+    const { html, text } = createContactEmailContent(formData);
+    const msg = {
+      to: "noel.tiscareno@outlook.com",
+      // Recipient email address
+      from: "noel.tiscareno@outlook.com",
+      // Sender email address (must be verified in SendGrid)
+      subject: `New Contact Form Submission from ${formData.name}`,
+      text,
+      html,
+      replyTo: formData.email
+    };
+    await mailService.send(msg);
+    console.log("Contact form email sent successfully");
+    return true;
+  } catch (error) {
+    console.error("Error sending contact form email:", error);
+    if (error.response && error.response.body) {
+      console.error("SendGrid error details:", JSON.stringify(error.response.body, null, 2));
+    }
+    return false;
+  }
+}
+
+// server/routes.ts
+var contactFormSchema = z.object({
+  name: z.string().min(2),
+  practice: z.string().optional(),
+  email: z.string().email(),
+  phone: z.string().optional(),
+  interest: z.string(),
+  message: z.string().optional(),
+  privacyAgreed: z.boolean().refine((val) => val === true)
+});
+async function registerRoutes(app2) {
+  app2.post("/api/contact", async (req, res) => {
+    try {
+      const validatedData = contactFormSchema.parse(req.body);
+      const emailSent = await sendContactFormEmail(validatedData);
+      if (emailSent) {
+        res.status(200).json({
+          success: true,
+          message: "Thank you for your message. We'll get back to you soon."
+        });
+      } else {
+        console.warn("Contact form submission valid but email notification failed");
+        res.status(200).json({
+          success: true,
+          message: "Your message was received, but there may be a delay in our response."
+        });
+      }
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        res.status(400).json({
+          success: false,
+          message: "Invalid form data",
+          errors: error.errors
+        });
+      } else {
+        console.error("Error processing contact form:", error);
+        res.status(500).json({
+          success: false,
+          message: "An unexpected error occurred. Please try again later."
+        });
+      }
+    }
+  });
+  const httpServer = createServer(app2);
+  return httpServer;
+}
+
+// server/vite.ts
+import express from "express";
+import fs from "fs";
+import path2 from "path";
+import { createServer as createViteServer, createLogger } from "vite";
+
+// vite.config.ts
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+var vite_config_default = defineConfig({
+  plugins: [
+    react(),
+    runtimeErrorOverlay(),
+    ...process.env.NODE_ENV !== "production" && process.env.REPL_ID !== void 0 ? [
+      await import("@replit/vite-plugin-cartographer").then(
+        (m) => m.cartographer()
+      )
+    ] : []
+  ],
+  resolve: {
+    alias: {
+      "@": path.resolve(import.meta.dirname, "client", "src"),
+      "@shared": path.resolve(import.meta.dirname, "shared"),
+      "@assets": path.resolve(import.meta.dirname, "attached_assets")
+    }
+  },
+  root: path.resolve(import.meta.dirname, "client"),
+  build: {
+    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    emptyOutDir: true
+  }
+});
+
+// server/vite.ts
+import { nanoid } from "nanoid";
+var viteLogger = createLogger();
+function log(message, source = "express") {
+  const formattedTime = (/* @__PURE__ */ new Date()).toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true
+  });
+  console.log(`${formattedTime} [${source}] ${message}`);
+}
+async function setupVite(app2, server) {
+  const serverOptions = {
+    middlewareMode: true,
+    hmr: { server },
+    allowedHosts: true
+  };
+  const vite = await createViteServer({
+    ...vite_config_default,
+    configFile: false,
+    customLogger: {
+      ...viteLogger,
+      error: (msg, options) => {
+        viteLogger.error(msg, options);
+        process.exit(1);
+      }
+    },
+    server: serverOptions,
+    appType: "custom"
+  });
+  app2.use(vite.middlewares);
+  app2.use("*", async (req, res, next) => {
+    const url = req.originalUrl;
+    try {
+      const clientTemplate = path2.resolve(
+        import.meta.dirname,
+        "..",
+        "client",
+        "index.html"
+      );
+      let template = await fs.promises.readFile(clientTemplate, "utf-8");
+      template = template.replace(
+        `src="/src/main.tsx"`,
+        `src="/src/main.tsx?v=${nanoid()}"`
+      );
+      const page = await vite.transformIndexHtml(url, template);
+      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+    } catch (e) {
+      vite.ssrFixStacktrace(e);
+      next(e);
+    }
+  });
+}
+function serveStatic(app2) {
+  const distPath = path2.resolve(import.meta.dirname, "public");
+  if (!fs.existsSync(distPath)) {
+    throw new Error(
+      `Could not find the build directory: ${distPath}, make sure to build the client first`
+    );
+  }
+  app2.use(express.static(distPath));
+  app2.use("*", (_req, res) => {
+    res.sendFile(path2.resolve(distPath, "index.html"));
+  });
+}
+
+// server/index.ts
+var app = express2();
+app.use(express2.json());
+app.use(express2.urlencoded({ extended: false }));
+app.use((req, res, next) => {
+  const start = Date.now();
+  const path3 = req.path;
+  let capturedJsonResponse = void 0;
+  const originalResJson = res.json;
+  res.json = function(bodyJson, ...args) {
+    capturedJsonResponse = bodyJson;
+    return originalResJson.apply(res, [bodyJson, ...args]);
+  };
+  res.on("finish", () => {
+    const duration = Date.now() - start;
+    if (path3.startsWith("/api")) {
+      let logLine = `${req.method} ${path3} ${res.statusCode} in ${duration}ms`;
+      if (capturedJsonResponse) {
+        logLine += ` :: ${JSON.stringify(capturedJsonResponse)}`;
+      }
+      if (logLine.length > 80) {
+        logLine = logLine.slice(0, 79) + "\u2026";
+      }
+      log(logLine);
+    }
+  });
+  next();
+});
+(async () => {
+  const server = await registerRoutes(app);
+  app.use((err, _req, res, _next) => {
+    const status = err.status || err.statusCode || 500;
+    const message = err.message || "Internal Server Error";
+    res.status(status).json({ message });
+    throw err;
+  });
+  if (app.get("env") === "development") {
+    await setupVite(app, server);
+  } else {
+    serveStatic(app);
+  }
+  const port = 5e3;
+  server.listen({
+    port,
+    host: "0.0.0.0",
+    reusePort: true
+  }, () => {
+    log(`serving on port ${port}`);
+  });
+})();
