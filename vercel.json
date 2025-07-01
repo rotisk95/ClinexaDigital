@@ -7,9 +7,6 @@
       "runtime": "@vercel/node@2.15.10"
     }
   },
-  "engines": {
-    "node": "18.x"
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
