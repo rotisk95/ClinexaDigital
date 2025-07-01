@@ -59,3 +59,47 @@ The build output is generated in `dist/public` as configured in `vercel.json`.
 
 Vercel will use `vercel.json` to build the project with `vite build` and serve the output from `dist/public`.
 
+
+### GitHub Actions Deployment
+
+You can deploy automatically whenever you push to `main` by using the [Vercel Action](https://github.com/marketplace/actions/vercel-action).
+Create a workflow file at `.github/workflows/vercel.yml` with the following contents:
+
+```yaml
+name: Deploy to Vercel
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm ci
+      - name: Vercel Action
+        uses: amondnet/vercel-action@v25.2.0
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: .
+          vercel-args: '--prod'
+```
+
+Add the `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` secrets in your
+repository settings.
+
+If you encounter an error like `Function Runtimes must have a valid version`,
+ensure `vercel.json` specifies a supported runtime:
+
+```json
+{
+  "functions": {
+    "api/contact.js": { "runtime": "nodejs18.x" }
+  }
+}
+```
