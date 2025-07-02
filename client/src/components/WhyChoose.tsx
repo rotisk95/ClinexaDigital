@@ -1,4 +1,9 @@
 import { User, Lock, Cog, Headphones } from "lucide-react";
+// CHANGE: Import source assets instead of using absolute paths
+import medicalTeam from "/src/assets/medical_team.jpg";
+import hipaaSecuritySvg from "/src/assets/hipaa-security.svg";
+import doctorPatient2 from "/src/assets/doctor_patient2.jpg";
+import emrIntegrationSvg from "/src/assets/emr-integration.svg";
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -10,23 +15,27 @@ const features = [
   {
     icon: <User className="h-5 w-5" />,
     title: "Healthcare Industry Focus",
-    description: "We exclusively serve medical practices and understand the unique challenges and regulations in healthcare."
+    description:
+      "We exclusively serve medical practices and understand the unique challenges and regulations in healthcare.",
   },
   {
     icon: <Lock className="h-5 w-5" />,
     title: "HIPAA Compliance Expertise",
-    description: "Our solutions are built with privacy and security at the core, ensuring you maintain compliance with healthcare regulations."
+    description:
+      "Our solutions are built with privacy and security at the core, ensuring you maintain compliance with healthcare regulations.",
   },
   {
     icon: <Cog className="h-5 w-5" />,
     title: "Seamless EMR Integration",
-    description: "Our platforms connect with major electronic medical record systems, creating a unified workflow for your practice."
+    description:
+      "Our platforms connect with major electronic medical record systems, creating a unified workflow for your practice.",
   },
   {
     icon: <Headphones className="h-5 w-5" />,
     title: "Dedicated Support Team",
-    description: "Our healthcare-specialized support team is available to assist with any questions or technical issues."
-  }
+    description:
+      "Our healthcare-specialized support team is available to assist with any questions or technical issues.",
+  },
 ];
 
 function Feature({ icon, title, description }: FeatureProps) {
@@ -53,44 +62,48 @@ export default function WhyChoose() {
           <div className="md:w-1/2 mb-12 md:mb-0">
             <div className="grid grid-cols-2 gap-4">
               <div className="overflow-hidden rounded-lg shadow-md">
-                <img 
-                  src="/src/assets/medical_team.jpg" 
-                  alt="Diverse team of healthcare professionals" 
+                {/* CHANGE: Use imported asset instead of absolute path */}
+                <img
+                  src={medicalTeam}
+                  alt="Diverse team of healthcare professionals"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md mt-6">
-                <img 
-                  src="/src/assets/hipaa-security.svg" 
-                  alt="HIPAA security visualization" 
+                {/* CHANGE: Use imported asset instead of absolute path */}
+                <img
+                  src={hipaaSecuritySvg}
+                  alt="HIPAA security visualization"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md">
-                <img 
-                  src="/src/assets/doctor_patient2.jpg" 
-                  alt="Doctor with clipboard helping patient" 
+                {/* CHANGE: Use imported asset instead of absolute path */}
+                <img
+                  src={doctorPatient2}
+                  alt="Doctor with clipboard helping patient"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="overflow-hidden rounded-lg shadow-md mt-6">
-                <img 
-                  src="/src/assets/emr-integration.svg" 
-                  alt="EMR integration visualization" 
+                {/* CHANGE: Use imported asset instead of absolute path */}
+                <img
+                  src={emrIntegrationSvg}
+                  alt="EMR integration visualization"
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
           </div>
-          
+
           <div className="md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
               Why Medical Practices Choose Clinexa
             </h2>
-            
+
             <div className="space-y-6">
               {features.map((feature, index) => (
-                <Feature 
+                <Feature
                   key={index}
                   icon={feature.icon}
                   title={feature.title}
@@ -98,23 +111,23 @@ export default function WhyChoose() {
                 />
               ))}
             </div>
-            
+
             <div className="mt-8">
-              <a 
-                href="#portfolio" 
+              <a
+                href="#portfolio"
                 className="inline-flex items-center text-primary font-medium hover:text-primary-dark"
               >
                 View our healthcare portfolio
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 ml-2" 
-                  viewBox="0 0 20 20" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2"
+                  viewBox="0 0 20 20"
                   fill="currentColor"
                 >
-                  <path 
-                    fillRule="evenodd" 
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" 
-                    clipRule="evenodd" 
+                  <path
+                    fillRule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
                   />
                 </svg>
               </a>

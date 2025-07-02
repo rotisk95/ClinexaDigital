@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ClexiaLogo from "./ClexiaLogo";
+// CHANGE: Import source assets instead of using absolute paths
+import doctorPatient1 from "/src/assets/doctor_patient1.jpg";
 
 export default function Hero() {
   return (
@@ -22,11 +24,12 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-          
+
           <div className="md:w-1/2">
             <div className="relative rounded-xl overflow-hidden shadow-2xl">
+              {/* CHANGE: Use imported asset instead of absolute path */}
               <img 
-                src="/src/assets/doctor_patient1.jpg" 
+                src={doctorPatient1}
                 alt="Doctor consulting with patient in Fort Worth medical office" 
                 className="w-full h-auto"
                 loading="eager"
