@@ -41,7 +41,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
-  const fortWorthLocations = ["Fort Worth", "Benbrook", "Arlington", "Burleson", "Crowley", "Mansfield"];
+  const fortWorthLocations = ["Dallas","Fort Worth", "Benbrook", "Arlington", "Burleson", "Crowley", "Mansfield"];
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
@@ -292,7 +292,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800 mb-1">Email Us</h4>
-                      <a href="mailto:contact@clinexa.com" className="text-primary hover:underline">contact@clinexa.com</a>
+                      <a href="mailto:contact@clinexadigital.com" className="text-primary hover:underline">contact@clinexadigital.com</a>
                     </div>
                   </div>
                   
@@ -302,7 +302,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800 mb-1">Call Us</h4>
-                      <a href="tel:+18005551234" className="text-primary hover:underline">(800) 555-1234</a>
+                      <a href="tel:+16823339545" className="text-primary hover:underline">(682) 333-9545</a>
                       <p className="text-sm text-gray-600 mt-1">Mon-Fri, 9am-5pm ET</p>
                     </div>
                   </div>
