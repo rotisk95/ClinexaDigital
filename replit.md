@@ -1,8 +1,8 @@
-# Clinexa Medical Website
+# Clinexa Digital Website
 
 ## Overview
 
-This project is a full-stack web application for Clinexa Medical, a company that provides digital solutions for healthcare practices. The application serves as a marketing website showcasing their services, portfolio, and allowing potential clients to contact them.
+This project is a full-stack web application for Clinexa Digital, a company that provides digital solutions for healthcare practices. The application serves as a marketing website showcasing their services, portfolio, and allowing potential clients to contact them.
 
 The application uses a modern tech stack with React on the frontend, Express on the backend, and Drizzle ORM for database interactions, designed to be deployed on Replit.
 

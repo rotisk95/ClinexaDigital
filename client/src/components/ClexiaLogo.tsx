@@ -45,7 +45,7 @@ export default function ClexiaLogo({ color = "primary", size = "md", className =
       </div>
       <div>
         <span className={`${textColor} font-heading font-bold ${textSizes[size]}`}>Clinexa</span>
-        <span className={`block ${smallTextSizes[size]} uppercase tracking-wider ${smallTextColor}`}>MEDICAL</span>
+        <span className={`block ${smallTextSizes[size]} uppercase tracking-wider ${smallTextColor}`}>DIGITAL</span>
         <span className={`hidden lg:block ${smallTextSizes[size]} tracking-wide ${smallTextColor} mt-1`}>Digital Solutions for Modern Healthcare</span>
       </div>
     </div>

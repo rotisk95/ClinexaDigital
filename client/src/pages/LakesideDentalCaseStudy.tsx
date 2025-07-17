@@ -30,7 +30,7 @@ export default function LakesideDentalCaseStudy() {
       "/images/lakeside-dental-education.svg"
     ],
     testimonial: {
-      quote: "Our partnership with Clinexa has transformed how we interact with patients. The virtual consultation feature has been a game-changer, allowing us to provide preliminary guidance to patients and better prepare for their visits. The education resources have also significantly improved treatment acceptance rates as patients better understand their options before coming in.",
+      quote: "Our partnership with Clinexa Digital has transformed how we interact with patients. The virtual consultation feature has been a game-changer, allowing us to provide preliminary guidance to patients and better prepare for their visits. The education resources have also significantly improved treatment acceptance rates as patients better understand their options before coming in.",
       author: "Dr. Amanda Rivera",
       role: "Owner, Lakeside Dental"
     }

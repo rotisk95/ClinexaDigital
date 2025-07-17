@@ -98,7 +98,7 @@ export default function WhyChoose() {
 
           <div className="md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Why Medical Practices Choose Clinexa
+              Why Medical Practices Choose Clinexa Digital
             </h2>
 
             <div className="space-y-6">

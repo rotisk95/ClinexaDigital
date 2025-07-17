@@ -29,7 +29,7 @@ export default function SunshinePediatricsCaseStudy() {
       "/images/sunshine-pediatrics-forms.svg"
     ],
     testimonial: {
-      quote: "The website Clinexa created for us perfectly captures our practice philosophy of making pediatric care a positive experience. Parents love being able to complete forms before visits, and children actually enjoy exploring the kids' section while waiting. It's made a tremendous difference in our practice efficiency and patient satisfaction.",
+      quote: "The website Clinexa Digital created for us perfectly captures our practice philosophy of making pediatric care a positive experience. Parents love being able to complete forms before visits, and children actually enjoy exploring the kids' section while waiting. It's made a tremendous difference in our practice efficiency and patient satisfaction.",
       author: "Dr. Michael Chen",
       role: "Founder, Sunshine Pediatrics"
     }

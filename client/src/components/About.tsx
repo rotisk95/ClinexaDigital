@@ -11,10 +11,10 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              About Clinexa Medical
+              About Clinexa Digital
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Clinexa Medical specializes in creating digital solutions
+              Clinexa Digital specializes in creating digital solutions
               exclusively for healthcare providers. Our team combines healthcare
               industry knowledge with technical expertise to deliver secure,
               compliant solutions that meet the unique needs of family doctors

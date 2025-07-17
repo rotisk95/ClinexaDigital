@@ -11,7 +11,7 @@ interface Testimonial {
 
 const testimonialsList: Testimonial[] = [
   {
-    content: "Clinexa transformed our outdated website into a professional platform that our patients love. The online scheduling feature has reduced our front desk calls by 30% and improved our patient satisfaction ratings.",
+    content: "Clinexa Digital transformed our outdated website into a professional platform that our patients love. The online scheduling feature has reduced our front desk calls by 30% and improved our patient satisfaction ratings.",
     author: "Dr. Rebecca Johnson",
     role: "Family Physician, Metro Family Care",
     initials: "RJ",
@@ -25,7 +25,7 @@ const testimonialsList: Testimonial[] = [
     bgColor: "bg-secondary"
   },
   {
-    content: "Working with Clinexa was effortless. They understood our small practice needs and delivered a website that has significantly improved our new patient acquisition. Their knowledge of healthcare regulations and ongoing support is exceptional.",
+    content: "Working with Clinexa Digital was effortless. They understood our small practice needs and delivered a website that has significantly improved our new patient acquisition. Their knowledge of healthcare regulations and ongoing support is exceptional.",
     author: "Dr. Maria Martinez",
     role: "Dentist, Lakeside Dental Care",
     initials: "MM",

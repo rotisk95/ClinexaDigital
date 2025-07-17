@@ -99,7 +99,7 @@ export default function Footer() {
         <div className="py-6 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} Clinexa Medical. All rights reserved.
+              &copy; {new Date().getFullYear()} Clinexa Digital. All rights reserved.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
